@@ -1,0 +1,11 @@
+<div class="container text-center padded features">
+  <div class="row">
+    <% ["globe", "dollar", "beer", "heart"].each do |image| %>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <%= image_tag "#{image}.png" %>
+        <h2>Discover the world</h2>
+        <p>The earth is your new home.</p>
+      </div>
+    <% end %>
+  </div>
+</div>

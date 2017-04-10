@@ -1,0 +1,22 @@
+<div class="wrapper-grey padded">
+  <div class="container">
+    <h2 class="text-center">Your next trip</h2>
+    <div class="row">
+      <% members = [ { name: "seb", city: "paris", descripition: "Charming room with patio" } , {name: "anne", city: "brussels", descripition: "Lovely house" }, { name: "romain", city: "london", descripition: "Nice flat in Piccadilly" } ] %>
+      <% members.each do |member| %>
+        <div class="col-xs-12 col-sm-4">
+
+            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path "card-#{member[:city]}.jpg" %>);">
+              <div class="card-category"><%= member[:city].capitalize %></div>
+              <div class="card-description">
+                <h2><%= "#{member[:name]}'s home" %></h2>
+                <p><%= member[:descripition]  %></p>
+              </div>
+              <%= image_tag "#{member[:name]}.jpg", class: "card-user avatar avatar-large" %>
+              <%= link_to "", "#", class: "card-link" %>
+            </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
