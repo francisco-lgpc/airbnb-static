@@ -1,0 +1,21 @@
+seb:
+  full_name: Sebastien Saunier
+  picture: http://placehold.it/150x150
+  owner_picture: http://placehold.it/150x150
+  summary: Charming room with patio
+  city: paris
+  wifi: true
+romain:
+  full_name: Romain Paillard
+  picture: http://placehold.it/150x150
+  owner_picture: http://placehold.it/150x150
+  summary: Nice flat in Piccadilly
+  city: london
+  wifi: false
+anne:
+  full_name: Anne
+  picture: http://placehold.it/150x150
+  owner_picture: http://placehold.it/150x150
+  summary: Lovely house
+  city: brussels
+  wifi: false

@@ -2,18 +2,18 @@
   <div class="container">
     <h2 class="text-center">Your next trip</h2>
     <div class="row">
-      <% members = [ { name: "seb", city: "paris", descripition: "Charming room with patio" } , {name: "anne", city: "brussels", descripition: "Lovely house" }, { name: "romain", city: "london", descripition: "Nice flat in Piccadilly" } ] %>
-      <% members.each do |member| %>
+      <% f = [ { name: "seb", city: "paris", summary: "Charming room with patio" } , {name: "anne", city: "brussels", summary: "Lovely house" }, { name: "romain", city: "london", summary: "Nice flat in Piccadilly" } ] %>
+      <% data.flats.each do |owner, details| %>
         <div class="col-xs-12 col-sm-4">
 
-            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path "card-#{member[:city]}.jpg" %>);">
-              <div class="card-category"><%= member[:city].capitalize %></div>
+            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path "card-#{details.city]}.jpg" %>);">
+              <div class="card-category"><%= details.city.capitalize %></div>
               <div class="card-description">
-                <h2><%= "#{member[:name]}'s home" %></h2>
-                <p><%= member[:descripition]  %></p>
+                <h2><%= "#{owner}'s home" %></h2>
+                <p><%= details.summary  %></p>
               </div>
-              <%= image_tag "#{member[:name]}.jpg", class: "card-user avatar avatar-large" %>
-              <%= link_to "", "#", class: "card-link" %>
+              <%= image_tag "#{owner}.jpg", class: "card-user avatar avatar-large" %>
+              <%= link_to "", "flats/#{owner}.html", class: "card-link" %>
             </div>
         </div>
       <% end %>
